@@ -24,6 +24,15 @@ in a data structure.
 
 - Represent functions that de-structure data as maps between contexts
 
+
+- `Foldable` is derivable for any ADT. Can use `Fodable ~= toList ~= N` to
+generate index expressions over `N`. However, these will be non-polynomial
+in the general case.
+
+- Tobias suggested trying to generate code for affine expressions first by
+using the `N` bijection. That way, we understand how to *code generate* from
+haskell programs.
+
 ### References
 
 - Analytic combinatorics
