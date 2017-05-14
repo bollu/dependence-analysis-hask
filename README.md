@@ -12,7 +12,34 @@ least the strict subset of Haskell, if not the entire langugage.
 - Check if the techniques are useful in other problem domains. Eg: Tobias Grosser
 mentioned that the same techniques might help with FFT computations
 
-### Current Idea
+### Current Idea - Runtime Polyhedra
+
+- Clearly, we cannot generate affine maps for things by look-ahead. Eg. trees
+- However, we _can_ keep polyhedral info attached to objects in the **runtime**.
+- Runtime can understand parallelism and try to extract parallelism.
+
+
+### Current Idea - Fix, Recursion schemes
+
+- any function `f` that applies to a constructor is trivially parallelisable across
+  constructor arguments.
+- any non-recursive function `f` can similarly be analysed immediately, given the `LHS` and the `RHS`.
+
+- This is because the only thing a pure function can do is destructure on the `LHS` and build up
+  structures using constructors / primops on the `RHS`
+  
+- Only problem is recursive functions.
+
+- Force language such that recursive functions can only be return as recursion schemes, and
+  recursive structures can only be written using `Fix`.
+  
+- This enables us to "study" the recursion separately from the data.
+
+- Can build up polyhedra corresponding to any ADT.
+
+- Need to see what happens to recursion schemes. `[TODO]`
+
+### Old Idea (One Hole Context)
 
 - Integer polyhedral capture the "context" of loops with quasi affine
 bounds. This representation allows us to perform dependence analysis.
