@@ -12,6 +12,16 @@ least the strict subset of Haskell, if not the entire langugage.
 - Check if the techniques are useful in other problem domains. Eg: Tobias Grosser
 mentioned that the same techniques might help with FFT computations
 
+### Follow up on - Polyhedral signal processing
+- Arrp: A Functional Language with Multi-dimensional Signals and Recurrence Equations.
+- Contains information about using polyhedral to model infinite signals.
+- Should have ideas.
+### Current Idea - Copatterns
+- Allows one to analyze infinite data types as "experiements"
+- Interesting viewpoint, perhaps we can rewrite polyhedral descriptions
+  in terms of copatterns
+
+
 ### Current Idea - Runtime Polyhedra
 
 - Clearly, we cannot generate affine maps for things by look-ahead. Eg. trees
@@ -65,4 +75,5 @@ haskell programs.
 - Analytic combinatorics
 - [Differentiating data structures](http://www.cs.nott.ac.uk/~psztxa/publ/jpartial.pdf)
 - [Derivative of regular type is Type of one-hole context](http://strictlypositive.org/diff.pdf)
+- [Copatterns](http://www2.tcs.ifi.lmu.de/~abel/popl13.pdf)
 
