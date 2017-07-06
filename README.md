@@ -2,7 +2,10 @@
 
 The aim is to try and use Haskell's strong type system to encode
 dependence information. This will hopefully allow for parallelsiation, of at
-least the strict subset of Haskell, if not the entire langugage.
+least the strict subset of Haskell, if not the entire langugage. Ideally, such a transformation should
+yield a representation that can be represented as an affine space: That way, we can reuse the
+machinery developed by the [polyhedral compilation community](http://polyhedral.info/) to optimise
+programs.
 
 
 ### Applications
